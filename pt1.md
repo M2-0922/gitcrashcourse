@@ -1,5 +1,7 @@
 ### Git Crash Course Pt-1
 
+`https://www.atlassian.com/git/tutorials/setting-up-a-repository`
+
 Git is a version control system. It is used to track changes in files and directories. It is used to track changes in files and directories. It is used to track changes in files and directories.
 
 ```bash
@@ -8,6 +10,7 @@ git config --list
 git config --global user.name "Your Name"
 git config --global user.email "Your Email Address"
 ```
+
 
 ##### Git Tags
 
@@ -165,3 +168,23 @@ git push origin master
 ```
 
 
+UNSTAGING A STAGED FILE IN GIT: git reset HEAD <file>
+
+```bash
+git reset HEAD <file>
+```
+
+UNDOING A COMMIT IN GIT: git reset --
+
+```bash
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+```
+
+git reset --soft HEAD~1: This will undo the commit but keep the changes in the staging area.
+
+git reset --hard HEAD~1: This will undo the commit and the changes in the working directory.
+
+git reset --hard HEAD~2: This will undo the last two commits and the changes in the working directory.
+
+git reset --hard HEAD~3: This will undo the last three commits and the changes in the working directory.
