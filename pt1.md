@@ -9,6 +9,55 @@ git config --global user.name "Your Name"
 git config --global user.email "Your Email Address"
 ```
 
+##### Git Tags
+
+Create tags for GitHub by either using:
+
+- Git command line, or
+- GitHub's web interface.
+
+Creating tags from the command line:
+
+To create a tag on your current branch, run this:
+
+```bash
+git tag <tagname>
+```
+
+If you want to include a description with your tag, add -a to create an annotated tag:
+
+```bash
+git tag <tagname> -a -m "Tag message"
+```
+
+
+This will create a local tag with the current state of the branch you are on. When pushing to your remote repo, tags are NOT included by default. You will need to explicitly say that you want to push your tags to your remote repo:
+
+
+```bash
+git push origin --tags
+```
+
+Or if you just want to push a single tag:
+
+```bash
+git push origin <tagname>
+```
+
+Creating tags through GitHub's web interface:
+
+1. Go to your repo's main page
+2. Click on the "Tags" tab
+3. Click on "Add tag"
+4. Enter the tag name and description
+5. Click on "Create tag"
+
+then you can push the tag to your remote repo by running:
+
+```bash
+git fetch --tags
+```
+
 ##### Git Commands
 
 ```
@@ -21,18 +70,6 @@ git diff: Show changes between commits, commit and working tree, etc
 git checkout: Switch branches or restore working tree files
 git tag: Create, list, delete or verify a tag object signed with GPG
 ```
-
-##### Git Tags
-
-```
-git tag: Create, list, delete or verify a tag object signed with GPG
-git tag -a v1.4 -m "my version 1.4"
-git tag -a v1.2 9fceb02
-git tag -d v1.4
-git push origin v1.5
-git push origin --tags
-```
-
 
 git init - Create a new git repository in the current directory
 
