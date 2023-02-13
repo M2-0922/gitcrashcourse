@@ -191,8 +191,9 @@ git reset --hard HEAD~3: This will undo the last three commits and the changes i
 
 #### Soft vs Hard reset
 
-A "soft" reset in Git simply moves the branch pointer to a specified commit, but it leaves the index and working tree unchanged. In other words, it only resets the branch to a specified commit, but it does not modify the contents of the files in the working tree or the index.
+A `"soft"` reset in Git simply moves the branch pointer to a specified commit, but it leaves the index and working tree unchanged. In other words, it only resets the branch to a specified commit, but it does not modify the contents of the files in the working tree or the index.
 
-A "hard" reset, on the other hand, resets the branch to the specified commit and completely discards the changes in the working tree and the index. It's as if you never made any changes after the specified commit. This means that any changes you've made to the files in your working tree and the index will be lost, so be cautious when using a hard reset.
+A `"hard"` reset, on the other hand, resets the branch to the specified commit and completely discards the changes in the working tree and the index. It's as if you never made any changes after the specified commit. This means that any changes you've made to the files in your working tree and the index will be lost, so be cautious when using a hard reset.
 
-To perform a soft reset in Git, you can use the command git reset --soft <commit>. To perform a hard reset, you can use the command git reset --hard <commit>.
+To perform a soft reset in Git, you can use the command `git reset --soft <commit>`. 
+To perform a hard reset, you can use the command `git reset --hard <commit>`.
