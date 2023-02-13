@@ -12,7 +12,7 @@ git config --global user.email "Your Email Address"
 ```
 
 
-##### Git Tags
+#### Git Tags
 
 Create tags for GitHub by either using:
 
@@ -61,7 +61,7 @@ then you can push the tag to your remote repo by running:
 git fetch --tags
 ```
 
-##### Git Commands
+#### Git Commands
 
 ```
 git init: Initialize a local git repository
@@ -188,3 +188,11 @@ git reset --hard HEAD~1: This will undo the commit and the changes in the workin
 git reset --hard HEAD~2: This will undo the last two commits and the changes in the working directory.
 
 git reset --hard HEAD~3: This will undo the last three commits and the changes in the working directory.
+
+#### Soft vs Hard reset
+
+A "soft" reset in Git simply moves the branch pointer to a specified commit, but it leaves the index and working tree unchanged. In other words, it only resets the branch to a specified commit, but it does not modify the contents of the files in the working tree or the index.
+
+A "hard" reset, on the other hand, resets the branch to the specified commit and completely discards the changes in the working tree and the index. It's as if you never made any changes after the specified commit. This means that any changes you've made to the files in your working tree and the index will be lost, so be cautious when using a hard reset.
+
+To perform a soft reset in Git, you can use the command git reset --soft <commit>. To perform a hard reset, you can use the command git reset --hard <commit>.
